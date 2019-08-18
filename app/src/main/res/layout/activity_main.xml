@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/action_chip_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:text="Basic Action Chip"/>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/action_chip"
+        style="@style/Widget.MaterialComponents.Chip.Action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/action_chip_txt"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:padding="10dp"
+        android:text="Hello World"
+        app:chipIcon="@drawable/ic_android_24dp"
+        app:iconStartPadding="5dp"/>
+
+    <TextView
+        android:id="@+id/entry_chip_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_chip"
+        android:layout_margin="10dp"
+        android:text="Entry Chip"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/entry_chip_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/entry_chip_txt">
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/filter_chip_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/entry_chip_group"
+        android:layout_margin="10dp"
+        android:text="Filter Chip"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/filter_chip_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filter_chip_txt">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filter_chip"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:text="Dogs"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filter_chip2"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Cats"/>
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/filter_chip_ss_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filter_chip_group"
+        android:layout_margin="10dp"
+        android:text="Filter Chip - Single Selection"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/filter_chip_SS_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filter_chip_ss_txt"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filter_ss_chip"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:text="Dogs"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filter_ss_chip2"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Cats"/>
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/choice_chip_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filter_chip_SS_group"
+        android:layout_margin="10dp"
+        android:text="Choice Chip"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/choice_chip_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choice_chip_txt"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/choice_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:text="Cars"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/choice_chip2"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Trucks"/>
+    </com.google.android.material.chip.ChipGroup>
+</RelativeLayout>
